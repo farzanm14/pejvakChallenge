@@ -1,13 +1,7 @@
-import 'react-native-gesture-handler';
 import * as React from 'react';
-import { View, Text, Button, Alert } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Feather';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { createStackNavigator } from '@react-navigation/stack';
-import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const CustomHeader = ({ props }) => {
     return (

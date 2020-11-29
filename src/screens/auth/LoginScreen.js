@@ -3,7 +3,7 @@ import { Button, Text, View } from 'react-native';
 
 function LoginScreen({navigation}) {
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1,justifyContent:'center'}}>
     
         <Button
           onPress={() => {
