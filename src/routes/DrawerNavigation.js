@@ -56,6 +56,7 @@ function DrawerNavigation() {
   return (
     <Drawer.Navigator
       initialRouteName="TabNavigator"
+      drawerPosition='right'
       drawerContent={(props) => CustomDrawerContent(props)}>
       <Drawer.Screen name="TabNavigator" component={TabNavigator} />
       <Drawer.Screen name="Notifications" component={NotificationsScreen} />

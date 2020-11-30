@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 function TabNavigator() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName='home'>
 
       <Tab.Screen
         name="profile"

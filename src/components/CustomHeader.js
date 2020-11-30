@@ -1,40 +1,30 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/Feather';
+import { Header, Icon, Title } from 'native-base';
+import { StyleSheet } from 'react-native';
 
 const CustomHeader = ({ props }) => {
+
     return (
-        <View
-            style={{
-                flexDirection: 'row',
-                height: 50,
-            }}>
-            <View>
-                {
-                    // Is Home?
-                    props.isHome ? (
-                        <TouchableOpacity
-                            onPress={() => {
-                                props.navigation.openDrawer();
-                            }}>
-                            <Icon name="menu" size={30} color="#000" />
-                        </TouchableOpacity>
-                    ) : (
-                            <TouchableOpacity
-                                onPress={() => {
-                                    props.navigation.goBack();
-                                }}>
-                                <Icon name="arrow-left" size={30} color="#000" />
-                            </TouchableOpacity>
-                        )
-                }
-            </View>
-            <View>
-                <Text>{props.title}</Text>
-            </View>
-        </View>
-    );
+        <Header transparent style={styles.container}>
+            <Icon name="location" />
+            <Title style={styles.title}>{props.title}</Title>
+            <Icon
+                onPress={() => { props.navigation.openDrawer() }}
+                name="menu" size={30} color="#000" />
+        </Header>
+    )
+
 };
 
 export default CustomHeader;
+
+const styles = StyleSheet.create({
+    container: {
+        justifyContent: 'center',
+    },
+    title: {
+        flex: 1,
+        color: 'gray',
+        alignItems: 'center'
+    }
+})
