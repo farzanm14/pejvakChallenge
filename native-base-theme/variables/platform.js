@@ -172,7 +172,7 @@ export default {
 
   // Font
   DefaultFontSize: 16,
-  fontFamily: platform === PLATFORM.IOS ? 'System' : 'Ionicons',
+  fontFamily: platform === PLATFORM.IOS ? 'IRANSansWeb(FaNum)' : 'IRANSansWeb(FaNum)',
   fontSizeBase: 15,
   get fontSizeH1() {
     return this.fontSizeBase * 1.8;
@@ -293,13 +293,14 @@ export default {
   // Text
   textColor: '#000',
   inverseTextColor: '#fff',
+  fontFamily:'IRANSansWeb(FaNum)',
   noteFontSize: 14,
   get defaultTextColor() {
     return this.textColor;
   },
 
   // Title
-  titleFontfamily: platform === PLATFORM.IOS ? 'System' : 'Ionicons',
+  titleFontfamily: platform === PLATFORM.IOS ? 'IRANSansWeb(FaNum)' : 'IRANSansWeb(FaNum)',
   titleFontSize: platform === PLATFORM.IOS ? 17 : 19,
   subTitleFontSize: platform === PLATFORM.IOS ? 11 : 14,
   subtitleColor: platform === PLATFORM.IOS ? '#8e8e93' : '#FFF',

@@ -33,6 +33,7 @@
 		9C641A327F944BF7871D1248 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F90CF8A59E5A41578997E093 /* rubicon-icon-font.ttf */; };
 		C60042F93A5B4353B04DD180 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D47172EBC21441590250972 /* Roboto.ttf */; };
 		D1A9181923CB49DAAFC01DBD /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9604229A15214380891C9F18 /* Ionicons.ttf */; };
+		D70C0C6B2574FE46009A1013 /* IRANSansWeb(FaNum).ttf in Resources */ = {isa = PBXBuildFile; fileRef = D70C0C6A2574FE46009A1013 /* IRANSansWeb(FaNum).ttf */; };
 		D7A94D01937B49B9A63506C1 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F56C89D018F4B828F36D281 /* FontAwesome5_Solid.ttf */; };
 		D81EFA2C0DF6D60E502639D0 /* libPods-pejvakChallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196961F4AB622BE43DDBA3D6 /* libPods-pejvakChallenge.a */; };
 		D8B285F1692445B2A4279F50 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81F557BD723546EC824424CC /* SimpleLineIcons.ttf */; };
@@ -98,6 +99,7 @@
 		CB4E4E2D4A894394A14180D2 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		D331621418A740EEA83CA0C4 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		D4807003F5E231D3747DF854 /* Pods-pejvakChallenge-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pejvakChallenge-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-pejvakChallenge-tvOSTests/Pods-pejvakChallenge-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		D70C0C6A2574FE46009A1013 /* IRANSansWeb(FaNum).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansWeb(FaNum).ttf"; sourceTree = "<group>"; };
 		E562C185C21042CAB0113C22 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -239,6 +241,7 @@
 		BF94FA8AF6D7477E920FC6EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D70C0C6A2574FE46009A1013 /* IRANSansWeb(FaNum).ttf */,
 				E562C185C21042CAB0113C22 /* AntDesign.ttf */,
 				AC85C303A7FE4E25B39AAA6D /* Entypo.ttf */,
 				3279803E267C4BF1A39D1738 /* EvilIcons.ttf */,
@@ -409,6 +412,7 @@
 				3C13161F5C0C449D8838D231 /* AntDesign.ttf in Resources */,
 				24BA81ACE6B2438799AD11EE /* Entypo.ttf in Resources */,
 				5FC49FDE72B243FBB842C3DC /* EvilIcons.ttf in Resources */,
+				D70C0C6B2574FE46009A1013 /* IRANSansWeb(FaNum).ttf in Resources */,
 				DBCC9ADBD801476C8FDAC0D5 /* Feather.ttf in Resources */,
 				185460F78FE54E678D101962 /* FontAwesome.ttf in Resources */,
 				80A4F0D865AF47A69011CA4E /* FontAwesome5_Brands.ttf in Resources */,

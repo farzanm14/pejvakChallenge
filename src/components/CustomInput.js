@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         flexDirection: 'row',
         paddingHorizontal: 5,
-        height: 45
+        height: 45,
     },
     hintStyle: {
         color: 'gray',
@@ -65,5 +65,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         marginHorizontal: 10,
         height: 10,
+        fontFamily:'IRANSansWeb(FaNum)'
+        // backgroundColor: 'red'
     }
 });

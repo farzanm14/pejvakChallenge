@@ -57,7 +57,7 @@ export default {
   badgePadding: platform === PLATFORM.IOS ? 3 : 0,
 
   // Button
-  buttonFontFamily: platform === PLATFORM.IOS ? 'System' : 'Ionicons',
+  buttonFontFamily: platform === PLATFORM.IOS ? 'IRANSansWeb(FaNum)' : 'IRANSansWeb(FaNum)',
   buttonDisabledBg: '#b5b5b5',
   buttonPadding: 6,
   get buttonPrimaryBg() {
@@ -150,7 +150,7 @@ export default {
 
   // Font
   DefaultFontSize: 16,
-  fontFamily: platform === PLATFORM.IOS ? 'System' : 'Ionicons',
+  fontFamily: platform === PLATFORM.IOS ? 'IRANSansWeb(FaNum)' : 'IRANSansWeb(FaNum)',
   fontSizeBase: 15,
   get fontSizeH1() {
     return this.fontSizeBase * 1.8;
@@ -271,12 +271,13 @@ export default {
   textColor: '#000',
   inverseTextColor: '#fff',
   noteFontSize: 14,
+  fontFamily:'IRANSansWeb(FaNum)',
   get defaultTextColor() {
     return this.textColor;
   },
 
   // Title
-  titleFontfamily: platform === PLATFORM.IOS ? 'System' : 'Ionicons',
+  titleFontfamily: platform === PLATFORM.IOS ? 'IRANSansWeb(FaNum)' : 'IRANSansWeb(FaNum)',
   titleFontSize: platform === PLATFORM.IOS ? 17 : 19,
   subTitleFontSize: platform === PLATFORM.IOS ? 11 : 14,
   subtitleColor: platform === PLATFORM.IOS ? '#000' : '#fff',

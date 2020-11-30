@@ -52,7 +52,7 @@ export default {
   badgePadding: 0,
 
   // Button
-  buttonFontFamily: 'Ionicons',
+  buttonFontFamily: 'IRANSansWeb(FaNum)',
   buttonDisabledBg: '#b5b5b5',
   buttonPadding: 6,
   get buttonPrimaryBg() {
@@ -143,7 +143,7 @@ export default {
 
   // Font
   DefaultFontSize: 16,
-  fontFamily: 'Ionicons',
+  fontFamily: 'IRANSansWeb(FaNum)',
   fontSizeBase: 15,
   get fontSizeH1() {
     return this.fontSizeBase * 1.8;
@@ -262,6 +262,7 @@ export default {
 
   // Text
   textColor: '#000',
+  fontFamily:'IRANSansWeb(FaNum)',
   inverseTextColor: '#fff',
   noteFontSize: 14,
   get defaultTextColor() {
@@ -269,7 +270,7 @@ export default {
   },
 
   // Title
-  titleFontfamily: 'Ionicons',
+  titleFontfamily: 'IRANSansWeb(FaNum)',
   titleFontSize: 19,
   subTitleFontSize: 14,
   subtitleColor: '#FFF',
