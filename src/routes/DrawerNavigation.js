@@ -8,6 +8,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import TabNavigator from './TabNavigation'
 import NotificationsScreen from '../screens/drawer/NotificationsScreen'
+import LoginScreen from '../screens/auth/LoginScreen'
+import { Button } from 'native-base';
 
 
 const Drawer = createDrawerNavigator();
@@ -43,6 +45,8 @@ function CustomDrawerContent(props) {
           <Icon name="bell" size={30} color="#000" />
           <Text style={{ marginLeft: 10 }}>Notifications Screen</Text>
         </TouchableOpacity>
+        <Button onPress={() => props.navigation.navigate('LoginScreen')}
+        ><Text>logout</Text></Button>
       </ScrollView>
     </SafeAreaView>
   );
@@ -55,6 +59,7 @@ function DrawerNavigation() {
       drawerContent={(props) => CustomDrawerContent(props)}>
       <Drawer.Screen name="TabNavigator" component={TabNavigator} />
       <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+      <Drawer.Screen name="logout" component={LoginScreen} />
     </Drawer.Navigator>
   );
 }
