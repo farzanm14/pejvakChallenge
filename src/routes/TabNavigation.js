@@ -52,7 +52,7 @@ function TabNavigator() {
         component={HistoryStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="time" color={color} size={size} />
+            <Icon name="ios-file-tray-full-outline" type='MaterialIcons' color={color} size={size} />
           ),
         }}
       />
