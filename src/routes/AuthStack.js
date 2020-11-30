@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import 'react-native-gesture-handler';
 import LoginScreen from '../screens/auth/LoginScreen';
+import VerifyPhoneScreen from '../screens/auth/VerifyPhoneScreen';
 import RegisterScreen from '../screens/auth/RegisterScreen';
 import DrawerNavigation from './DrawerNavigation';
 
@@ -29,6 +30,11 @@ function AuthStack() {
         <STACKLOGIN.Screen
           name="DrawerNavigation"
           component={DrawerNavigation}
+          options={navOptionHandler}
+        /> 
+        <STACKLOGIN.Screen
+          name="VerifyPhoneScreen"
+          component={VerifyPhoneScreen}
           options={navOptionHandler}
         />
       </STACKLOGIN.Navigator>

@@ -17,7 +17,7 @@ function LoginScreen({ navigation }) {
           <View style={styles.formContainer}>
             <Text style={styles.introText}>برای ورود شماره تماس خود را وارد نمایید</Text>
             <CustomInput length={10} callBack={val => alert(val)} hintText='+۹۸' style={styles.input} />
-            <Button block full iconLeft onPress={() => { navigation.navigate('DrawerNavigation'); }} style={styles.button}>
+            <Button block full iconLeft onPress={() => { navigation.navigate('VerifyPhoneScreen'); }} style={styles.button}>
               <Icon type="MaterialIcons" name="keyboard-arrow-left" />
               <Text>ورود</Text>
             </Button>

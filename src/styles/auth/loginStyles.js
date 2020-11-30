@@ -20,5 +20,15 @@ export default StyleSheet.create({
     },
     button: {
         borderRadius: 5,
+    },
+    resendContainer:{
+        flexDirection:'row',
+        alignItems:'center',
+        alignContent:'center',
+        justifyContent:'space-between'
+    },
+    remainText:{
+        color:'gray',
+        fontSize:14
     }
 })
