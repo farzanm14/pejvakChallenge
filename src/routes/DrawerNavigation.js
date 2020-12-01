@@ -45,8 +45,8 @@ function CustomDrawerContent(props) {
           <Icon name="bell" size={30} color="#000" />
           <Text style={{ marginLeft: 10 }}>Notifications Screen</Text>
         </TouchableOpacity>
-        <Button onPress={() => props.navigation.navigate('LoginScreen')}
-        ><Text>logout</Text></Button>
+        {/* <Button onPress={() => props.navigation.navigate('LoginScreen')}
+        ><Text>logout</Text></Button> */}
       </ScrollView>
     </SafeAreaView>
   );

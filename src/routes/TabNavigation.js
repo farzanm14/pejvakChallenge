@@ -1,8 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 import 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/Feather';
-
+// import Icon from 'react-native-vector-icons/Feather';
+import {Icon} from 'native-base'
+import {StyleSheet} from 'react-native'
 import HistoryStack from './bottomTab/HistoryStack';
 import HomeStack from './bottomTab/HomeStack';
 import ProfileStack from './bottomTab/ProfileStack';
@@ -14,13 +15,12 @@ const Tab = createBottomTabNavigator();
 function TabNavigator() {
   return (
     <Tab.Navigator initialRouteName='home'>
-
       <Tab.Screen
         name="profile"
         component={ProfileStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="user" color={color} size={size} />
+            <Icon name="person" style={styles.icon} size={size} />
           ),
         }}
       />
@@ -30,7 +30,7 @@ function TabNavigator() {
         component={WalletStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="wallet" color={color} size={size} />
+            <Icon name="wallet" style={styles.icon} size={size} />
           ),
         }}
       />
@@ -40,7 +40,7 @@ function TabNavigator() {
         component={ScanStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="scan" color={color} size={size} />
+            <Icon name="scan" style={styles.icon} size={size} />
           ),
         }}
       />
@@ -52,7 +52,7 @@ function TabNavigator() {
         component={HistoryStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="ios-file-tray-full-outline" type='MaterialIcons' color={color} size={size} />
+            <Icon name="history" type='MaterialIcons' style={styles.icon} size={size} />
           ),
         }}
       />
@@ -62,7 +62,7 @@ function TabNavigator() {
         component={HomeStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="home" style={styles.icon} size={size} />
           ),
         }}
       />
@@ -71,3 +71,9 @@ function TabNavigator() {
 }
 
 export default TabNavigator;
+
+const styles=StyleSheet.create({
+  icon:{
+    color:'#33adff'
+  }
+})
