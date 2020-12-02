@@ -33,6 +33,7 @@ export default StyleSheet.create({
         width:'100%'
     },
     remainText:{
+        // width:150,
         color:'gray',
         fontSize:14,
     },
