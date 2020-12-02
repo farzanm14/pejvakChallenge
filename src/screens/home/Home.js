@@ -1,38 +1,54 @@
+import firestore from '@react-native-firebase/firestore';
 import * as React from 'react';
-import { Button, Text, View } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomHeader from '../../components/CustomHeader';
-import CustomList from './CustomList'
-import firestore from '@react-native-firebase/firestore'
+import Http from '../../tools/HttpService';
+import CustomList from './CustomList';
 
 function Home({ navigation }) {
 
   const [list, setList] = React.useState([])
+  const [loading, setLoading] = React.useState(true)
 
   React.useEffect(() => {
-    getOptionsList()
-    getMarker() 
-    getMarkers()
+    getOptionsByAxios()
+    // getOptionsList()
+    // getMarker() 
+    // getMarkers()
   }, [])
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <CustomHeader props={{ title: 'Home Stack', isHome: true, navigation: navigation }} />
-      {/* <CustomList list={list} /> */}
-      <CustomList list={tempList} />
+      {
+        loading ? <ActivityIndicator color='gray' /> :
+          <CustomList list={list} />
+      }
     </SafeAreaView>
   );
 
+  function getOptionsByAxios() {
+    setLoading(true)
+    Http.httpGet('25a1a39f-0559-4fe2-b31c-2b32fdd57c4e').then(res => {
+      setList(res)
+      setLoading(false)
+    }).catch(err => {
+      console.log('err', err)
+      setLoading(false)
+      alert('fail to load ')
+    })
+  }
   async function getMarkers() {
     const events = await firebase.firestore().collection('events')
     events.get().then((querySnapshot) => {
-        const tempDoc = []
-        querySnapshot.forEach((doc) => {
-           tempDoc.push({ id: doc.id, ...doc.data() })
-        })
-        console.log(tempDoc)
-     })
-   }
+      const tempDoc = []
+      querySnapshot.forEach((doc) => {
+        tempDoc.push({ id: doc.id, ...doc.data() })
+      })
+      console.log(tempDoc)
+    })
+  }
   async function getMarker() {
     const snapshot = await firestore().collection('options').get()
     console.log(snapshot.docs.map(doc => doc.data()))
