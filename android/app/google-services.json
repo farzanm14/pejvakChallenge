@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "291549647825",
+    "firebase_url": "https://pejvakchallenge.firebaseio.com",
+    "project_id": "pejvakchallenge",
+    "storage_bucket": "pejvakchallenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291549647825:android:9f0d14226d660f15ee46f0",
+        "android_client_info": {
+          "package_name": "com.pejvakchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291549647825-75lej7hsafocsphputk8m0evb7s60ie4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoDfsdZ-gkfIUn6i87NG3ldXBxxUhGOWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291549647825-75lej7hsafocsphputk8m0evb7s60ie4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

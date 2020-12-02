@@ -3,7 +3,7 @@ import { Button, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomHeader from '../../components/CustomHeader';
 import CustomList from './CustomList'
-// import firestore from '@react-native-firebase/firestore'
+import firestore from '@react-native-firebase/firestore'
 
 function Home({ navigation }) {
 
@@ -11,26 +11,53 @@ function Home({ navigation }) {
 
   React.useEffect(() => {
     getOptionsList()
+    getMarker() 
+    getMarkers()
   }, [])
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <CustomHeader props={{ title: 'Home Stack', isHome: true, navigation: navigation }} />
+      {/* <CustomList list={list} /> */}
       <CustomList list={tempList} />
     </SafeAreaView>
   );
 
+  async function getMarkers() {
+    const events = await firebase.firestore().collection('events')
+    events.get().then((querySnapshot) => {
+        const tempDoc = []
+        querySnapshot.forEach((doc) => {
+           tempDoc.push({ id: doc.id, ...doc.data() })
+        })
+        console.log(tempDoc)
+     })
+   }
+  async function getMarker() {
+    const snapshot = await firestore().collection('options').get()
+    console.log(snapshot.docs.map(doc => doc.data()))
+    return snapshot.docs.map(doc => doc.data());
+  }
   function getOptionsList() {
-    // firestore.collection('options').onSnapshot(
-    //   docs => {
-    //     let options = []
-    //     docs.forEach(doc => {
-    //       options.push(doc.data())
-    //     })
-    //     setList(options)
-    //     alert(options)
-    //   }
-    // )
+
+    const subscriber = firestore()
+      .collection('options')
+      .doc('14')
+      .onSnapshot(documentSnapshot => {
+        console.log('option data: ', documentSnapshot.data());
+      });
+
+    // const optionsCollection = 
+    firestore().collection('options').onSnapshot(
+      docs => {
+        let options = []
+        docs.forEach(doc => {
+          options.push(doc.data())
+        })
+        setList(options)
+        console.log("options", options)
+      }
+    )
   }
 }
 
